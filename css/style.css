@@ -424,10 +424,11 @@ ul, ol {
     margin: 0 auto 1.4rem;
     border-radius: var(--radius-md);
     overflow: hidden;
-    background: var(--glass-bg);
+    background: linear-gradient(135deg, var(--bg-mid) 0%, rgba(124,58,237,0.15) 50%, rgba(236,38,143,0.1) 100%);
     border: 1px solid var(--glass-border);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
+    position: relative;
 }
 
 .card-image img {
