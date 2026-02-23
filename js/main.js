@@ -1,5 +1,5 @@
 /* ══════════════════════════════════
-   MBC Party Co. — Main JS
+   The Whole Party — Main JS
 ══════════════════════════════════ */
 
 // ── Mobile nav toggle ──

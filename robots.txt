@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thewhole.party/sitemap.xml
+LLMs-Txt: https://thewhole.party/llms.txt
