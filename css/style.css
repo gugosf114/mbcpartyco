@@ -912,6 +912,70 @@ ul, ol {
 
 .footer-bottom a:hover { color: white; }
 
+/* Logo Trust Strip */
+.footer-trust {
+    max-width: 1100px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.footer-trust .trust-label {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.logo-scroll {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-track {
+    display: flex;
+    gap: 3rem;
+    animation: scroll-logos 20s linear infinite;
+    width: max-content;
+}
+
+.logo-track img {
+    height: 22px;
+    width: auto;
+    opacity: 0.4;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s ease;
+}
+
+.logo-track img:hover {
+    opacity: 0.8;
+}
+
+@keyframes scroll-logos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Credit Line */
+.footer-credit {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    opacity: 0.5;
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.footer-credit a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.footer-credit a:hover { color: white; opacity: 1; }
+
 /* ══════════════════════════════════
    CONTACT FORM
 ══════════════════════════════════ */
