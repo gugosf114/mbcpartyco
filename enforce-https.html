@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why "Enforce HTTPS" is Disabled | GitHub Pages Help</title>
+    <meta name="description" content="Understand why the Enforce HTTPS toggle is grayed out on GitHub Pages and how to fix DNS so a certificate can be issued.">
+    <meta name="theme-color" content="#EC268F">
+    <link rel="canonical" href="https://thewhole.party/enforce-https.html">
+    <meta property="og:title" content="Why Enforce HTTPS is Disabled">
+    <meta property="og:description" content="Learn why the Enforce HTTPS toggle is grayed out on GitHub Pages and how to enable it.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thewhole.party/enforce-https.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="The Whole Party">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="party-bg">
+        <canvas id="partyParticles"></canvas>
+        <div class="bg-orb orb-pink"></div>
+        <div class="bg-orb orb-yellow"></div>
+        <div class="bg-orb orb-purple"></div>
+    </div>
+
+    <nav class="site-nav">
+        <a href="index.html" class="nav-logo">
+            <span class="mbc">The Whole</span>
+            <span class="party">Party</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="nav-cta">Get a Quote</a>
+        </div>
+    </nav>
+
+    <main class="site-main">
+
+        <section class="hero">
+            <div class="hero-badge">GitHub Pages</div>
+            <h1>"Enforce HTTPS" is Grayed Out?</h1>
+            <p class="subtitle">Here's why the toggle is disabled and how to turn it back on.</p>
+        </section>
+
+        <section class="about-content">
+            <div class="story-block">
+                <h2>Why the toggle is unavailable</h2>
+                <p>GitHub Pages only enables Enforce HTTPS after it can issue an SSL/TLS certificate for your custom domain. If your DNS records are not pointing to GitHub Pages, the certificate request fails or is still pending, and the checkbox stays disabled.</p>
+                <p>Common causes include: the domain still points to another host, mixed A/AAAA records that don't match GitHub's IPs, or a proxy (like an orange-clouded Cloudflare record) intercepting traffic.</p>
+            </div>
+
+            <div class="story-block">
+                <h2>How to fix it</h2>
+                <p><strong>1) Point DNS to GitHub Pages.</strong> For apex domains, use A/AAAA records for GitHub Pages IPs. For subdomains, use a CNAME to <code>USERNAME.github.io</code>.</p>
+                <p><strong>2) Wait for the certificate.</strong> After DNS resolves to GitHub Pages, GitHub automatically provisions the certificate. This can take a few minutes after propagation.</p>
+                <p><strong>3) Avoid conflicting proxies.</strong> Pause SSL/HTTP proxies or CDN features that rewrite traffic until the GitHub certificate is issued, then re-enable them if needed.</p>
+            </div>
+
+            <div class="story-block">
+                <h2>What to expect</h2>
+                <p>Once DNS is correct and the certificate is issued, the "Enforce HTTPS" checkbox becomes clickable. If it stays disabled after DNS is fixed, remove the custom domain in Pages settings, add it back, and let GitHub retry the certificate request.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="mbc">The Whole</span> <span class="party">Party</span>
+                </div>
+                <p>Full-service party rentals and event setup in the San Francisco Bay Area.</p>
+                <a href="https://mybakingcreations.com" class="bakery-link" target="_blank" rel="noopener">Visit My Baking Creations &rarr;</a>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html">Bounce Houses</a>
+                <a href="services.html#packages">Party Packages</a>
+                <a href="services.html#corporate">Corporate Events</a>
+                <a href="contact.html">Custom Quote</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="tel:7072967777">(707) 296-7777</a>
+                <a href="mailto:party@mybakingcreations.com">party@mybakingcreations.com</a>
+                <a href="contact.html">Get a Quote</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Whole Party All rights reserved.</p>
+            <p>A sister brand of <a href="https://mybakingcreations.com" target="_blank" rel="noopener">My Baking Creations</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
