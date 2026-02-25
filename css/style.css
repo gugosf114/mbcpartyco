@@ -231,7 +231,7 @@ ul, ol {
 ══════════════════════════════════ */
 .hero {
     text-align: center;
-    padding: 9rem 1.5rem 1.5rem;
+    padding: 7rem 1.5rem 1.5rem;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -1198,7 +1198,7 @@ ul, ol {
 }
 
 @media (max-width: 700px) {
-    .hero { padding: 7rem 1.2rem 3rem; }
+    .hero { padding: 5.5rem 1.2rem 1.5rem; }
     .hero h1 { font-size: 2rem; white-space: normal; }
     .card-grid .grid { grid-template-columns: 1fr; }
     .hero-trust { gap: 1rem; }
