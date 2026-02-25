@@ -164,6 +164,8 @@ ul, ol {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex: 1;
+    justify-content: center;
 }
 
 .nav-links a {
@@ -229,7 +231,7 @@ ul, ol {
 ══════════════════════════════════ */
 .hero {
     text-align: center;
-    padding: 9rem 1.5rem 4rem;
+    padding: 9rem 1.5rem 1.5rem;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -262,6 +264,7 @@ ul, ol {
     color: white;
     line-height: 1.15;
     margin-bottom: 1.2rem;
+    white-space: nowrap;
 }
 
 .hero h1 .accent {
@@ -364,6 +367,7 @@ ul, ol {
     padding: 2.2rem 1.8rem 1.8rem;
     transition: var(--transition-bounce);
     overflow: hidden;
+    transform: perspective(800px) translateZ(0);
 }
 
 .glass-card::before {
@@ -378,11 +382,11 @@ ul, ol {
 }
 
 .glass-card:hover {
-    transform: translateY(-8px);
+    transform: perspective(800px) translateY(-10px) translateZ(15px);
     border-color: rgba(236, 38, 143, 0.2);
     box-shadow:
-        0 8px 32px rgba(236, 38, 143, 0.12),
-        0 24px 64px rgba(0, 0, 0, 0.3);
+        0 15px 40px rgba(236, 38, 143, 0.15),
+        0 30px 70px rgba(0, 0, 0, 0.35);
 }
 
 .glass-card:hover::before { opacity: 1; }
@@ -393,7 +397,7 @@ ul, ol {
 .card-grid {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 1.5rem 5rem;
+    padding: 1rem 1.5rem 4rem;
 }
 
 .card-grid .grid {
@@ -438,8 +442,13 @@ ul, ol {
 }
 
 .glass-card:hover .card-image {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 24px rgba(236, 38, 143, 0.2);
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 12px 32px rgba(236, 38, 143, 0.25);
+}
+
+.glass-card:hover .card-image img {
+    filter: brightness(1.05);
+    transition: filter 0.3s ease;
 }
 
 .glass-card h3 {
@@ -835,8 +844,40 @@ ul, ol {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+/* Footer coverage column */
+.footer-coverage h4 {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.footer-coverage .footer-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.footer-coverage .footer-areas .area-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-pill);
+    transition: var(--transition);
+}
+
+.footer-coverage .footer-areas .area-tag:hover {
+    border-color: var(--pink);
+    color: white;
 }
 
 .footer-brand .footer-logo {
@@ -1151,14 +1192,14 @@ ul, ol {
     }
 
     .footer-inner {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
 }
 
 @media (max-width: 700px) {
     .hero { padding: 7rem 1.2rem 3rem; }
-    .hero h1 { font-size: 2rem; }
+    .hero h1 { font-size: 2rem; white-space: normal; }
     .card-grid .grid { grid-template-columns: 1fr; }
     .hero-trust { gap: 1rem; }
     .form-row { grid-template-columns: 1fr; }
