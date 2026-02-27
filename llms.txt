@@ -49,6 +49,7 @@ San Francisco, Daly City, San Mateo, Hillsborough, Palo Alto, Mountain View, San
 ## All Pages
 - Home: https://thewhole.party/
 - Services: https://thewhole.party/services.html
+- Corporate Events: https://thewhole.party/corporate.html
 - About: https://thewhole.party/about.html
 - Contact / Get a Quote: https://thewhole.party/contact.html
 - Sister bakery: https://mybakingcreations.com
